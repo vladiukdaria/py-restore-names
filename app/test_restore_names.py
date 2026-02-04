@@ -1,9 +1,7 @@
-import pytest
-
 from app.restore_names import restore_names
 
 
-def test_restore_first_name_when_none():
+def test_restore_first_name_when_none() -> None:
     users = [
         {
             "first_name": None,
@@ -17,7 +15,7 @@ def test_restore_first_name_when_none():
     assert users[0]["first_name"] == "Jack"
 
 
-def test_restore_first_name_when_missing():
+def test_restore_first_name_when_missing() -> None:
     users = [
         {
             "last_name": "Adams",
@@ -30,7 +28,7 @@ def test_restore_first_name_when_missing():
     assert users[0]["first_name"] == "Mike"
 
 
-def test_does_not_override_existing_first_name():
+def test_does_not_override_existing_first_name() -> None:
     users = [
         {
             "first_name": "John",
@@ -44,7 +42,7 @@ def test_does_not_override_existing_first_name():
     assert users[0]["first_name"] == "John"
 
 
-def test_restore_names_for_list_of_users():
+def test_restore_names_for_list_of_users() -> None:
     users = [
         {
             "first_name": None,
@@ -67,6 +65,10 @@ def test_restore_names_for_list_of_users():
         },
         {
             "first_name": "Mike",
+            "last_name": "Adams",
+            "full_name": "Mike Adams",
+        },
+    ]
             "last_name": "Adams",
             "full_name": "Mike Adams",
         },

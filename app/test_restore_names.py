@@ -74,7 +74,3 @@ def test_restore_names_for_multiple_users() -> None:
             "full_name": "Mike Adams",
         },
     ]
-    ]        "last_name": "Adams",
-            "full_name": "Mike Adams",
-        },
-    ]
